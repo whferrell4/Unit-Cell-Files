@@ -34,20 +34,20 @@ def main():
 
     # Setup Sampling
     # Set Base Sample Count. Total sample count = nsamples*(nvariables+2)
-    nsamples = 12
+    nsamples = 1
 
     # Dict input to Saltelli sampling.
     problem = {
         'num_vars': 8,
         'names': ['Volume Fraction', 'E1f', 'E2f', 'Nu12f', 'Nu23f', 'G12f', 'EMa', 'NuMa'],
-        'bounds': [[.3, .8],
-                   [229000*.7, 229000*1.3],
+        'bounds': [[.0*.7, .6*1.3],
+                   [235000*.7, 235000*1.3],
                    [14000*.7, 14000*1.3],
-                   [.3*.7, .3*1.3],
-                   [.3*.7, .3*1.3],
-                   [20000*.7, 20000*1.3],
-                   [4340*.7, 4340*1.3],
-                   [.34*.7, .34*1.3]]
+                   [.2*.7, .2*1.3],
+                   [.25*.7, .25*1.3],
+                   [28000*.7, 28000*1.3],
+                   [379000*.7, 379000*1.3],
+                   [.1*.7, .1*1.3]]
     }
 
     #Run Sampling
